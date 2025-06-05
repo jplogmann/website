@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #6b7280;
         }
 
         .container {
@@ -26,7 +26,7 @@
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
@@ -37,15 +37,9 @@
 
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
         }
 
         .nav-links {
@@ -61,7 +55,7 @@
         }
 
         .nav-links a:hover {
-            color: #ff6b6b;
+            color: #00d4ff;
         }
 
         /* Hero Section */
@@ -71,9 +65,10 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            color: #333;
             position: relative;
             overflow: hidden;
+            background: #6b7280;
         }
 
         .hero::before {
@@ -111,7 +106,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
             color: white;
             padding: 12px 30px;
             text-decoration: none;
@@ -123,7 +118,7 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
         }
 
         @keyframes slideInUp {
@@ -163,7 +158,7 @@
             transform: translateX(-50%);
             width: 50px;
             height: 3px;
-            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
         }
 
         /* About Section */
@@ -187,7 +182,7 @@
             width: 250px;
             height: 250px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -224,7 +219,7 @@
         .skill-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -232,6 +227,91 @@
             margin: 0 auto 1rem;
             color: white;
             font-size: 1.5rem;
+        }
+
+        /* Education Section */
+        .education-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #00d4ff, #0099cc);
+            transform: translateX(-50%);
+        }
+
+        .education-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .education-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .education-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .education-year {
+            flex: 0 0 120px;
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            height: fit-content;
+            margin-top: 1rem;
+        }
+
+        .education-item:nth-child(odd) .education-year {
+            margin-right: 2rem;
+        }
+
+        .education-item:nth-child(even) .education-year {
+            margin-left: 2rem;
+        }
+
+        .education-content {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .education-content h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .institution {
+            color: #0099cc;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .grade, .award, .thesis {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .award {
+            color: #00a86b;
+            font-style: italic;
         }
 
         /* Projects Section */
@@ -255,7 +335,7 @@
 
         .project-image {
             height: 200px;
-            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -279,7 +359,7 @@
         }
 
         .project-link {
-            color: #667eea;
+            color: #0099cc;
             text-decoration: none;
             font-weight: bold;
         }
@@ -323,11 +403,11 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #00d4ff;
         }
 
         .submit-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
             color: white;
             padding: 1rem 2rem;
             border: none;
@@ -363,7 +443,7 @@
         }
 
         .social-links a:hover {
-            color: #ff6b6b;
+            color: #00d4ff;
         }
 
         /* Responsive Design */
@@ -385,6 +465,25 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+
+            .education-timeline::before {
+                left: 30px;
+            }
+
+            .education-item {
+                flex-direction: column !important;
+                margin-left: 60px;
+            }
+
+            .education-item:nth-child(odd) .education-year,
+            .education-item:nth-child(even) .education-year {
+                margin: 0 0 1rem 0;
+                width: 100px;
+            }
+
+            .education-content {
+                margin-left: 0;
+            }
         }
 
         /* Scroll animations */
@@ -404,11 +503,11 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">Portfolio</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -418,8 +517,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hello, I'm Your Name</h1>
-            <p>Full Stack Developer & Creative Problem Solver</p>
+            <h1>Hello, I'm Justin Plogmann</h1>
+            <p>Mechanical Engineer & Computational Scientist</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
         </div>
     </section>
@@ -430,8 +529,8 @@
             <h2 class="fade-in">About Me</h2>
             <div class="about-content fade-in">
                 <div class="about-text">
-                    <p>I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences. With expertise in modern web technologies, I bring ideas to life through clean, efficient code.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enjoying the great outdoors. I believe in continuous learning and staying up-to-date with the latest industry trends.</p>
+                    <p>I'm an innovative Mechanical Engineer and Computational Scientist with over 4 years of experience in computational methods, modeling and high-performance computing (HPC). I hold a Dr. sc. in Computational Fluid Dynamics from ETH Zürich and specialize in developing simulation models, optimizing engineering processes and improving model accuracy for complex dynamical systems.</p>
+                    <p>Currently working as a Postdoctoral Researcher at ETH Zürich, I focus on designing cost-efficient data assimilation frameworks for unsteady simulations of turbulent flows. My research has achieved accuracy improvements by a factor of 10 in mean flow, vortex shedding frequency and turbulent properties. I have extensive experience in supervising research projects and working in international, interdisciplinary teams.</p>
                 </div>
                 <div class="about-image">
                     <div class="profile-img">🚀</div>
@@ -446,24 +545,66 @@
             <h2 class="fade-in">Skills</h2>
             <div class="skills-grid fade-in">
                 <div class="skill-card">
+                    <div class="skill-icon">🌊</div>
+                    <h3>Computational Fluid Dynamics</h3>
+                    <p>CFD, Turbulence Modeling, OpenFOAM, Ansys Fluent</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔬</div>
+                    <h3>Computational Science</h3>
+                    <p>Data Assimilation, Mathematical Modeling, Optimization</p>
+                </div>
+                <div class="skill-card">
                     <div class="skill-icon">💻</div>
-                    <h3>Frontend Development</h3>
-                    <p>React, Vue.js, HTML5, CSS3, JavaScript</p>
+                    <h3>Programming & HPC</h3>
+                    <p>C/C++, Python, MPI, High-Performance Computing</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Python, Express, MongoDB</p>
+                    <div class="skill-icon">🎓</div>
+                    <h3>Academic & Research</h3>
+                    <p>Scientific Writing, Project Management, Technical Supervision</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe XD, Responsive Design</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="fade-in">Education</h2>
+            <div class="education-timeline fade-in">
+                <div class="education-item">
+                    <div class="education-year">2021-2024</div>
+                    <div class="education-content">
+                        <h3>Dr. sc. in Computational Fluid Dynamics</h3>
+                        <p class="institution">ETH Zürich, Switzerland</p>
+                        <p class="thesis">Doctoral thesis: "Unsteady data-driven and hybrid LES/RANS simulations of turbulent flows"</p>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Tools & Technologies</h3>
-                    <p>Git, Docker, AWS, CI/CD</p>
+                <div class="education-item">
+                    <div class="education-year">2018-2020</div>
+                    <div class="education-content">
+                        <h3>M.Sc. in Mechanical Engineering</h3>
+                        <p class="institution">Technische Universität Berlin, Germany</p>
+                        <p class="grade">Final grade: 1.1 (equivalent to 5.9/6)</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-year">2019-2020</div>
+                    <div class="education-content">
+                        <h3>Exchange Student Program</h3>
+                        <p class="institution">ETH Zürich, Switzerland</p>
+                        <p class="award">Swiss-European Mobility Programme scholarship recipient</p>
+                        <p class="thesis">Master's thesis: "Variational data assimilation for spray combustion simulation" (Grade: 6/6)</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-year">2014-2018</div>
+                    <div class="education-content">
+                        <h3>B.Sc. in Mechanical Engineering</h3>
+                        <p class="institution">Technische Universität Berlin, Germany</p>
+                        <p class="grade">Final grade: 1.5 (equivalent to 5.5/6)</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -475,27 +616,27 @@
             <h2 class="fade-in">Projects</h2>
             <div class="projects-grid fade-in">
                 <div class="project-card">
-                    <div class="project-image">🌐</div>
+                    <div class="project-image">🌊</div>
                     <div class="project-content">
-                        <h3 class="project-title">E-Commerce Platform</h3>
-                        <p class="project-description">A full-stack e-commerce solution with React frontend and Node.js backend, featuring user authentication and payment integration.</p>
-                        <a href="#" class="project-link">View Project →</a>
+                        <h3 class="project-title">Data Assimilation Framework</h3>
+                        <p class="project-description">Cost-efficient data assimilation framework for unsteady simulations of turbulent flows, achieving 10x accuracy improvements in mean flow and vortex shedding frequency.</p>
+                        <a href="#" class="project-link">Learn More →</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">📱</div>
+                    <div class="project-image">⚡</div>
                     <div class="project-content">
-                        <h3 class="project-title">Task Management App</h3>
-                        <p class="project-description">A responsive web application for managing tasks and projects with real-time collaboration features and intuitive UI.</p>
-                        <a href="#" class="project-link">View Project →</a>
+                        <h3 class="project-title">Hybrid LES/RANS Modeling</h3>
+                        <p class="project-description">Developed efficient data-driven and hybrid LES/RANS approaches in OpenFOAM, reducing computational costs by up to 65% for turbulent flow simulations.</p>
+                        <a href="#" class="project-link">Learn More →</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">📊</div>
+                    <div class="project-image">🚗</div>
                     <div class="project-content">
-                        <h3 class="project-title">Data Visualization Dashboard</h3>
-                        <p class="project-description">Interactive dashboard for data visualization using D3.js and React, with real-time updates and customizable charts.</p>
-                        <a href="#" class="project-link">View Project →</a>
+                        <h3 class="project-title">Vehicle Exhaust Plume Analysis</h3>
+                        <p class="project-description">Conducted unsteady RANS simulations of vehicle exhaust plumes for remote emission sensing, identifying critical design parameters for real-world applications.</p>
+                        <a href="#" class="project-link">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -536,7 +677,7 @@
                 <a href="#">🐙</a>
                 <a href="#">🐦</a>
             </div>
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Justin Plogmann. All rights reserved.</p>
         </div>
     </footer>
 
@@ -577,10 +718,10 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.color = '#333';
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
+                header.style.color = 'white';
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.1)';
+                header.style.background = 'rgba(0, 0, 0, 0.3)';
                 header.style.color = 'white';
             }
         });
